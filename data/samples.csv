@@ -1,0 +1,25 @@
+id,word,sentence,gold
+01,bank,She deposited money into her bank account.,depository_financial_institution.n.01
+02,bank,They walked along the bank beside the river water.,bank.n.01
+03,bat,The nocturnal bat used echolocation to navigate.,bat.n.01
+04,bat,The player raised his bat to hit the ball.,bat.n.05
+05,crane,The crane lifted heavy objects at the construction site.,crane.n.04
+06,crane,A long-necked crane stood in the marsh.,crane.n.05
+07,plant,The industrial plant employs workers in its buildings.,plant.n.01
+08,plant,A green plant is a living organism in the garden.,plant.n.02
+09,seal,The marine seal came on shore to breed.,seal.n.09
+10,seal,The tight seal provides a perfect closure.,seal.n.08
+11,mouse,The small mouse has pointed ears and a long tail.,mouse.n.01
+12,mouse,Move the mouse to control the cursor on the computer screen.,mouse.n.04
+13,spring,The spring is a season of growth in the garden.,spring.n.01
+14,spring,The metal spring returns to its shape when pressed.,spring.n.02
+15,match,The match ignites with friction to start a fire.,match.n.01
+16,match,Two teams compete in the final match.,match.n.02
+17,bark,The bark protects the woody stems of trees.,bark.n.01
+18,bark,The dog made a loud bark.,bark.n.04
+19,bass,The bass singer has the lowest adult male voice.,bass.n.03
+20,bass,The fisherman caught a freshwater bass in the lake.,bass.n.08
+21,light,The light is electromagnetic radiation visible to our eyes.,light.n.01
+22,light,The warning light is a visual signal for the driver.,light.n.14
+23,draft,A cold draft of air entered the room.,draft.n.02
+24,draft,The author revised the draft of her written work.,draft.n.05

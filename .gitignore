@@ -1,0 +1,6 @@
+.deps/
+data/nltk_data/
+__pycache__/
+*.pyc
+tmp/
+output/

@@ -1,0 +1,18 @@
+{
+  "classic": {
+    "total": 24,
+    "correct": 21,
+    "resolved": 21,
+    "accuracy": 0.875,
+    "coverage": 0.875,
+    "selective_accuracy": 1.0
+  },
+  "extended": {
+    "total": 24,
+    "correct": 21,
+    "resolved": 21,
+    "accuracy": 0.875,
+    "coverage": 0.875,
+    "selective_accuracy": 1.0
+  }
+}

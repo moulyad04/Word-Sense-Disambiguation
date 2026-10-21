@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Explore ambiguous words, compare WordNet senses, and understand the context behind every prediction."><title>Sense Atlas · Word Sense Disambiguation</title><link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23765bce'/%3E%3Cpath d='M9 10h9a4 4 0 010 8h-4a3 3 0 000 6h9M23 8h-9a4 4 0 000 8h4a3 3 0 010 6H9' fill='none' stroke='white' stroke-width='2'/%3E%3C/svg%3E"><link rel="stylesheet" href="styles.css"><script src="app.js" defer></script></head>
+<body>
+<a class="skip" href="#main">Skip to workspace</a>
+<aside class="sidebar">
+ <a href="#workspace" class="brand"><span class="brand-symbol">s<span>↗</span></span><span>Sense Atlas<small>LANGUAGE, IN CONTEXT</small></span></a>
+ <div class="nav-label">YOUR WORKSPACE</div>
+ <nav aria-label="Main navigation">
+  <button class="nav active" data-view="workspace"><span aria-hidden="true">◈</span>Disambiguation<span class="nav-dot"></span></button>
+  <button class="nav" data-view="explorer"><span aria-hidden="true">⌘</span>Sense explorer</button>
+  <button class="nav" data-view="evaluation"><span aria-hidden="true">▥</span>Evaluation</button>
+  <button class="nav" data-view="methodology"><span aria-hidden="true">☷</span>Methodology</button>
+ </nav>
+ <div class="side-note"><div class="mini-orbit" aria-hidden="true"><span>word</span><i>sense</i><b>context</b></div><h3>A word. Many worlds.</h3><p>Explore how the surrounding words reveal a different meaning.</p><a href="#methodology" id="how-link">How it works <span>↗</span></a></div>
+ <div class="side-bottom"><span class="course-mark">05</span><div>Advanced NLP Lab<small>AML23702 · CO5</small></div></div>
+</aside>
+<div class="app-shell">
+ <header class="topbar"><div class="breadcrumb">NLP workspace <span>/</span> <b id="breadcrumb-title">Disambiguation</b></div><div class="top-right"><span class="local-badge"><i></i>Runs locally</span><span class="avatar" aria-label="Lab Exercise 5">E5</span></div></header>
+ <main id="main">
+  <div id="loading" role="status">Loading the WordNet sense inventory…</div>
+  <section id="workspace" class="view" hidden>
+   <div class="page-heading"><div><div class="eyebrow">WORD SENSE DISAMBIGUATION</div><h1>Find meaning in context<span>.</span></h1><p>One word can tell different stories. Let the sentence guide you.</p></div><span class="edition">LAB EXERCISE <b>05</b></span></div>
+   <div class="summary-strip"><div><span class="summary-icon">Aa</span><span><b>12</b> ambiguous words</span></div><div><span class="summary-icon">◈</span><span><b id="sense-count">90</b> WordNet senses</span></div><div><span class="summary-icon">≋</span><span><b>2</b> Lesk-style methods</span></div><div><span class="summary-icon">✓</span><span><b>24</b> annotated examples</span></div></div>
+   <div class="workspace-grid">
+    <form id="analysis-form" class="panel input-panel">
+     <div class="panel-head"><h2><span class="step">01</span>Give your word some context</h2><span class="subtle">INPUT</span></div>
+     <label for="sentence">Your sentence <span>English · noun senses</span></label><textarea id="sentence" maxlength="2000" rows="4" required>She visited the bank to discuss deposits and lending.</textarea>
+     <div class="input-meta"><span>Include the exact target word in your sentence.</span><span id="char-count">47 / 2000</span></div>
+     <div class="form-row"><div><label for="target">Target word</label><select id="target" name="target"></select></div><div><label for="algorithm">Algorithm</label><select id="algorithm"><option value="extended">Extended Lesk</option><option value="classic">Gloss-only Lesk</option></select></div></div>
+     <button class="primary" type="submit"><span aria-hidden="true">✧</span>Disambiguate sentence<span aria-hidden="true">→</span></button>
+     <p id="input-error" class="error" role="alert" hidden></p>
+     <div class="try-label">OR TRY A DIFFERENT CONTEXT</div><div class="sample-chips" id="sample-chips"></div>
+    </form>
+    <section class="panel result-panel" aria-labelledby="result-heading" aria-live="polite"><div class="panel-head"><h2 id="result-heading"><span class="step">02</span>The meaning that fits</h2><span id="result-state" class="result-badge">Context match</span></div><div id="selected-result"></div></section>
+   </div>
+   <section class="panel evidence-panel"><div class="panel-head"><div><h2><span class="step">03</span>Behind the interpretation</h2><p>Every score comes from words you can inspect.</p></div><button class="text-button" id="download-result">Export result <span aria-hidden="true">↗</span></button></div><div class="evidence-grid"><div><div class="subtle">CONTEXT WORDS</div><div id="context-tokens" class="token-list"></div><div class="evidence-note"><i></i><span>Highlighted words overlap with the leading sense’s lexical signature. Scores are evidence counts, not probabilities.</span></div></div><div class="candidate-area"><div class="subtle">COMPETING SENSES <span id="candidate-count"></span></div><div id="candidates"></div></div></div></section>
+   <div class="bottom-note"><span>Powered by Princeton WordNet 3.0</span><span>Transparent by design. Your sentences stay in this browser.</span></div>
+  </section>
+  <section id="explorer" class="view" hidden></section><section id="evaluation" class="view" hidden></section><section id="methodology" class="view" hidden></section>
+ </main>
+ <footer>Sense Atlas <span>·</span> Advanced Natural Language Processing <span>·</span> Exercise 05</footer>
+</div></body></html>
